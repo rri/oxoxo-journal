@@ -312,29 +312,28 @@ blockquote {
         padding: calc(var(--spacing)*2) var(--spacing);
     }
 
-    .article, .comment {
+    .container {
         border: var(--line-width) solid transparent;
         border-top-color: var(--line-color);
         padding: calc(var(--spacing) * 2) var(--spacing);
     }
 
-    .article-title, .comment-title {
+    .title {
         font-size: x-large;
         padding: var(--spacing) 0;
     }
 
-    .article-date, .comment-date {
+    .date {
         display: flex;
         flex-direction: column;
         padding: var(--spacing) 0;
     }
 
-    .article-reading-time {
+    .reading-time {
         text-align: right;
     }
 
-    .article-content,
-    .comment-content {
+    .container-content {
         font-size: 1.1em;
         -webkit-hyphens: auto;
         hyphens: auto;
@@ -342,7 +341,7 @@ blockquote {
         text-align: justify;
     }
 
-    .article-tags {
+    .tags {
         display: flex;
         column-gap: var(--spacing);
     }

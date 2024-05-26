@@ -22,3 +22,4 @@ external_links_no_follow = true
 copyright_info = "Ramnath R Iyer"
 icon = "oxo.icon.webp"
 logo = "oxo.logo.webp"
+section_summaries = [ "journal" ]

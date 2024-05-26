@@ -1,0 +1,33 @@
+name: Publish
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+ id-token: write
+ contents: read
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::471112707844:role/WebsitePublisher
+          aws-region: us-west-1
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build package
+        uses: shalzz/zola-deploy-action@master
+        env:
+          BUILD_ONLY: true
+      - name: Deploy package
+        run: |
+          aws s3 sync public/ s3://oxo-lang-org-website-assets --delete --cache-control max-age=86400
+          aws cloudfront create-invalidation --distribution-id E34JONM2MN2NLO --paths '/*'

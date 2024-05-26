@@ -1,0 +1,24 @@
+base_url = "https://oxo-lang.org"
+title = "oxo"
+description = "oxo is a general-purpose programming toolchain for the cloud"
+default_language = "en"
+build_search_index = true
+compile_sass = true
+minify_html = true
+generate_feed = true
+taxonomies = [
+    { name = "authors", paginate_by = 5, paginate_path = "pages", feed = true },
+    { name = "tags", paginate_by = 5, paginate_path = "pages", feed = true },
+]
+
+
+[markdown]
+highlight_code = true
+highlight_theme = "solarized-light"
+smart_punctuation = true
+external_links_no_follow = true
+
+[extra]
+copyright_info = "Ramnath R Iyer"
+icon = "oxo.icon.webp"
+logo = "oxo.logo.webp"

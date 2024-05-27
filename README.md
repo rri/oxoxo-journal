@@ -11,12 +11,12 @@
 ---
 
 <p align="center">
-    an activity journal for <a href="https://github.com/rri/oxoxo" title="oxo">oxo</a> development
+    a journal tracking the development of <a href="https://github.com/rri/oxoxo" title="oxo">oxo</a>
 </p>
 
 ---
 
-This repository contains the source code and content of my activity journal for the development of
+This repository contains the source code and content of a journal tracking the development of
 [oxo](https://github.com/rri/oxoxo). Content created or updated in this repository gets published
 automatically to my [activity journal](https://oxo-lang.org).
 

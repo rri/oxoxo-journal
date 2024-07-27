@@ -29,5 +29,5 @@ jobs:
           BUILD_ONLY: true
       - name: Deploy package
         run: |
-          aws s3 sync public/ s3://oxo-lang-org-website-assets --delete --cache-control max-age=86400
+          aws s3 sync public/ s3://oxo-lang-org-website-assets --delete --cache-control max-age=31536000
           aws cloudfront create-invalidation --distribution-id E34JONM2MN2NLO --paths '/*'
